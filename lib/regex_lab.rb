@@ -26,8 +26,13 @@ end
 def valid_phone_number?(phone)
   if phone.match(/\A\d\d\d\d\d\d\d\d\d\d\z/)
     true
-    elsif phone.match(/\A\d\d\d\s*\d\d\d\s*\d\d\d\d\z)
+    elsif phone.match(/\A\d\d\d\s*\d\d\d\s*\d\d\d\d\z/)
     true
-    elsif phone.match 
+    elsif phone.match(/\A\s(\d\d\d\s)\d\d\d\d\d\d\d\z/)
+    true
+    elsif phone.match(/\A\s(\d\d\d\s)\d\d\d\s-\d\d\d\d\z/)
+    true
+  else
+    false
   end
 end
