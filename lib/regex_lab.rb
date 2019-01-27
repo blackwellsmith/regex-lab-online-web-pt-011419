@@ -21,7 +21,7 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   binding.pry
-  text.match(/\A[A-Z]\.*\W\z/) != nil
+  text.match(/\A[A-Z].*\W\z/) != nil
 
 end
 
