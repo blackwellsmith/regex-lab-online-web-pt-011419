@@ -1,3 +1,4 @@
+require "pry"
 def starts_with_a_vowel?(word)
   if word.match(/^[aeiouAEIOU]/)
     true
@@ -24,6 +25,7 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
+  binding.pry
   if phone.match(/\A\d\d\d\d\d\d\d\d\d\d\z/)
     true
     elsif phone.match(/\A\d\d\d\s*\d\d\d\s*\d\d\d\d\z/)
